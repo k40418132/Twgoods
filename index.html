@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>台灣之美</title>
+    <script src="https://maps.google.com/maps/api/js?sensor=false"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="js\main.css">
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+    <script src="js\main.js"></script>
+    <script src="js\twgoods.js"></script>
+
+</head>
+
+<body>
+    <div id="header">
+        <img class="title" src="img\logo.png">
+        <ul id="header-nav">
+            <li>
+                <p><i class="fa fa-angle-down"></i>北部</p>
+                <ul class="inner-ul"></ul>
+            </li>
+
+            <li>
+                <p><i class="fa fa-angle-down"></i>中部</p>
+                <ul class="inner-ul"></ul>
+            </li>
+
+            <li>
+                <p><i class="fa fa-angle-down"></i>南部</p>
+                <ul class="inner-ul"></ul>
+            </li>
+
+            <li>
+                <p><i class="fa fa-angle-down"></i>東部</p>
+                <ul class="inner-ul"></ul>
+            </li>
+
+            <li class="add">
+                <p style="cursor:pointer"><i class="fa fa-plus-square"></i>新增景點</p>
+            </li>
+            <li class="home">
+                <p style="cursor:pointer"><i class="fa fa-home"></i>回首頁</p>
+            </li>
+        </ul>
+    </div>
+    <div id="content">
+        <ul id="content-ul">
+            <li class="active">
+                <img src="img\city1.png">
+            </li>
+            <li>
+                <img src="img\city2.png">
+            </li>
+            <li>
+                <img src="img\city3.png">
+            </li>
+            <li style="width:31%">
+                <img src="img\city4.png">
+            </li>
+        </ul>
+    </div>
+
+  <div>
+    <ul class="intro-ul hide display"></ul>
+  </div>
+
+    <div class="article hide display">
+      <span class="article-back"><i class="fa fa-angle-left"></i>返回</span>
+      <span class="article-top"><i class="fa fa-angle-up"></i>回頂部</span>
+        <div class="article-title">
+            <span></span>
+        </div>
+        <div class="article-img" style="background-image:url()"></div>
+        <div class="article-content">
+            <div class="article-title">
+                <span>簡介</span>
+            </div>
+            <p></p>
+        </div>
+        <div class="article-photo">
+            <div class="article-title">
+                <span>圖片長廊</span>
+            </div>
+            <img class="article-photo-main">
+            <ul></ul>
+        </div>
+        <div class="article-content">
+            <div class="article-title">
+                <span>交通資訊</span>
+            </div>
+            <p></p>
+        </div>
+        <div id="article-map"></div>
+        <div class="article-content">
+            <div class="article-title">
+                <span>相關介紹</span>
+            </div>
+            <p></p>
+        </div>
+        <div id="article-btn">
+            <ul>
+                <li>修改資訊</li>
+                <li>刪除景點</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div id="change" class="hide display">
+        <div id="change-inner">
+
+
+            <div class="change-area">
+                <span>景點區域:</span>
+                <select>
+  <option value ="0">北部</option>
+  <option value ="1">中部</option>
+  <option value="2">南部</option>
+  <option value="3">東部</option>
+</select>
+            </div>
+
+            <div class="change-title">
+                <span>景點名稱:</span>
+                <input type="text" name="" value="">
+            </div>
+
+            <div class="change-title2">
+                <span>景點描述:</span>
+                <input type="text" name="" value="" style="width:300px">
+            </div>
+
+            <div class="change-intro">
+                <div>簡介內容:</div>
+                <textarea name="name" rows="8" cols="80"></textarea>
+            </div>
+            <div class="change-mainphoto">
+                <span>封面圖片:</span>
+                <button type="button" name="button" onclick="getMainPhoto()">新增圖片連結</button>
+                <br>
+                <img src="">
+
+            </div>
+            <div class="change-photo">
+                <span>圖片長廊:</span>
+                <button type="button" name="button" onclick="getPhoto()">新增圖片連結</button>
+                <ul></ul>
+            </div>
+            <div class="change-traffic">
+                <div>交通資訊:</div>
+                <textarea name="name" rows="8" cols="80"></textarea>
+            </div>
+            <div class="change-lat">
+                <span>經度:</span>
+                <input type="text" name="" value="">
+            </div>
+            <div class="change-lng">
+                <span>緯度:</span>
+                <input type="text" name="" value="">
+            </div>
+            <div class="change-about">
+                <div>相關介紹:</div>
+                <textarea name="name" rows="8" cols="80"></textarea>
+            </div>
+            <div id="change-btn">
+                <ul>
+                    <li>確定</li>
+                    <li>取消</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
